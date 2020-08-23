@@ -1,12 +1,14 @@
 package com.shivam;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class CricketCoach implements Coach {
 	
 	@Autowired
+	@Qualifier("physicsTution")
 	TutionService service;
 	
 	public void setService(TutionService service) {
@@ -23,7 +25,7 @@ public class CricketCoach implements Coach {
 	}
 
 	public String coachGivesTution() {
-		return service.study();
+		return service.teach();
 	}
 	
 }
