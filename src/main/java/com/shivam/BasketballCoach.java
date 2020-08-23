@@ -1,5 +1,8 @@
 package com.shivam;
 
+import org.springframework.stereotype.Component;
+
+@Component("myCoach")
 public class BasketballCoach implements Coach {
 
 	public String getRoutine() {
