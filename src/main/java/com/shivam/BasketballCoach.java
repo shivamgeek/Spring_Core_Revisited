@@ -1,12 +1,18 @@
 package com.shivam;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BasketballCoach implements Coach {
-
+	
+	@Autowired
 	TutionService service;
 	
+	public void setService(TutionService service) {
+		this.service = service;
+	}
+
 	public String getRoutine() {
 		return "Practice Basketball everyday for 1 hour";
 	}
